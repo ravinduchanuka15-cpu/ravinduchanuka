@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | R.C.MOBILE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        primary: '#00f2fe',
+                        secondary: '#4facfe',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-glow { text-shadow: 0 0 20px rgba(79, 172, 254, 0.5); }
+            .glass {
+                background: rgba(30, 41, 59, 0.7);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+        body { background-color: #0b1120; color: #e2e8f0; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary text-glow">
+                        R.C.MOBILE
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="shop.html" class="text-gray-300 hover:text-primary transition-colors font-medium">Shop</a>
+                    <a href="about.html"
+                        class="text-gray-300 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-primary transition-colors font-medium border-b-2 border-primary">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-700 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Shop</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary/20">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- Contact Info -->
+            <div>
+                <h1 class="text-4xl font-bold mb-6 text-white">Get in Touch</h1>
+                <p class="text-gray-400 mb-10 text-lg">
+                    Have questions about a new phone or need support? Visit our store or drop us a message.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-white">Visit Us</h3>
+                            <p class="text-gray-400 mt-1">123 Mobile Street,<br>Colombo 03, Sri Lanka</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-white">Call Us</h3>
+                            <p class="text-gray-400 mt-1">+94 77 123 4567</p>
+                            <p class="text-gray-400">+94 11 234 5678</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-white">Email Us</h3>
+                            <p class="text-gray-400 mt-1">rc.mobile@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="glass p-8 rounded-2xl">
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2" for="name">Name</label>
+                        <input
+                            class="w-full bg-gray-800 text-white border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                            id="name" type="text" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2" for="email">Email</label>
+                        <input
+                            class="w-full bg-gray-800 text-white border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                            id="email" type="email" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2" for="message">Message</label>
+                        <textarea
+                            class="w-full bg-gray-800 text-white border border-gray-600 rounded-lg px-4 py-3 h-32 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                            id="message" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button
+                        class="w-full bg-gradient-to-r from-primary to-secondary text-black font-bold py-3 rounded-lg hover:shadow-[0_0_20px_rgba(79,172,254,0.5)] transition-all transform hover:-translate-y-1"
+                        type="button">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Map Placeholder -->
+        <div class="mt-20 glass p-2 rounded-2xl">
+            <div class="w-full h-80 bg-gray-800 rounded-xl flex items-center justify-center text-gray-500">
+                <p>Google Maps Embed would go here</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800 text-center text-gray-600 text-sm">
+        &copy; 2024 R.C.MOBILE. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

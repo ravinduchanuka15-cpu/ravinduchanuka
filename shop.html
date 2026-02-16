@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | R.C.MOBILE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Import custom scrollbar -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#00f2fe',
+                        secondary: '#4facfe',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-glow { text-shadow: 0 0 20px rgba(79, 172, 254, 0.5); }
+            .glass {
+                background: rgba(30, 41, 59, 0.7);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+        body { background-color: #0b1120; color: #e2e8f0; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navbar (Consistent) -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary text-glow">
+                        R.C.MOBILE
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="shop.html"
+                        class="text-white hover:text-primary transition-colors font-medium border-b-2 border-primary">Shop</a>
+                    <a href="about.html"
+                        class="text-gray-300 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="contact.html"
+                        class="text-gray-300 hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-700 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Home</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary/20">Shop</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 bg-gradient-to-b from-dark to-[#0b1120]">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1
+                class="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                Our Collection
+            </h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                Explore the latest flagship smartphones, budget-friendly options, and premium accessories.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filters & Grid -->
+    <section class="py-8 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="px-6 py-2 rounded-full bg-primary text-black font-bold shadow-[0_0_15px_rgba(79,172,254,0.4)] hover:scale-105 transition-transform active">All</button>
+                <button
+                    class="px-6 py-2 rounded-full glass hover:bg-white/10 hover:border-primary transition-all">Apple</button>
+                <button
+                    class="px-6 py-2 rounded-full glass hover:bg-white/10 hover:border-primary transition-all">Samsung</button>
+                <button
+                    class="px-6 py-2 rounded-full glass hover:bg-white/10 hover:border-primary transition-all">Pixel</button>
+                <button
+                    class="px-6 py-2 rounded-full glass hover:bg-white/10 hover:border-primary transition-all">Accessories</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- Product 1 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            <!-- Replace with actual image -->
+                            Image
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button
+                                class="bg-primary text-black px-6 py-2 rounded-full font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">iPhone 15 Pro</h3>
+                        <p class="text-gray-400 text-sm mb-3">Titanium Frame</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 395,000</span>
+                            <span class="text-xs text-gray-500">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            Image</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">Samsung S24 Ultra</h3>
+                        <p class="text-gray-400 text-sm mb-3">512GB AI Phone</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 410,000</span>
+                            <span class="text-xs text-gray-500">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            Image</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">Google Pixel 8</h3>
+                        <p class="text-gray-400 text-sm mb-3">Best Camera</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 240,000</span>
+                            <span class="text-xs text-gray-500">Low Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            Image</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">Sony WH-1000XM5</h3>
+                        <p class="text-gray-400 text-sm mb-3">Noise Cancelling</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 95,000</span>
+                            <span class="text-xs text-gray-500">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            Image</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">Apple Watch Ultra 2</h3>
+                        <p class="text-gray-400 text-sm mb-3">Rugged Sport</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 285,000</span>
+                            <span class="text-xs text-gray-500">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div
+                    class="glass rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                    <div class="relative h-60 bg-gray-800/50 flex items-center justify-center p-4">
+                        <div
+                            class="w-full h-full bg-gray-700/50 rounded flex items-center justify-center text-gray-500">
+                            Image</div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white">Nothing Phone (2)</h3>
+                        <p class="text-gray-400 text-sm mb-3">Unique Design</p>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-3">
+                            <span class="text-primary font-bold">Rs. 210,000</span>
+                            <span class="text-xs text-gray-500">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12 space-x-2">
+                <button class="w-10 h-10 rounded-full bg-primary text-black font-bold">1</button>
+                <button class="w-10 h-10 rounded-full glass hover:bg-white/10">2</button>
+                <button class="w-10 h-10 rounded-full glass hover:bg-white/10">3</button>
+                <button class="w-10 h-10 rounded-full glass hover:bg-white/10">></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-600 text-sm">
+            &copy; 2024 R.C.MOBILE. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
